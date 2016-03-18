@@ -37,4 +37,4 @@ KTH             | 72.0%       | 73.7%   | 75.6%        | 54.4%      |   76.6%  |
 
 ### Acknowldgements
 
-We thank MatConvNet(http://www.vlfeat.org/matconvnet) and VLFEAT teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for hashing methods[https://github.com/felixyu](https://github.com/felixyu) and Cimpoi for FV-CNN encoders[https://github.com/mcimpoi](https://github.com/mcimpoi). The copyrights of original codes reserve. 
+We thank MatConvNet(http://www.vlfeat.org/matconvnet) and VLFEAT teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for hashing methods [https://github.com/felixyu](https://github.com/felixyu) and Cimpoi for FV-CNN encoders [https://github.com/mcimpoi](https://github.com/mcimpoi). The copyrights of original codes reserve. 
