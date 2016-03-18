@@ -1,4 +1,4 @@
-function [B,R] = ITQ(V, n_iter)
+function [B,R] = ITQ_rand(V)
 %
 % main function for ITQ which finds a rotation of the PCA embedded data
 % Input:
@@ -20,20 +20,12 @@ bit = size(V,2);
 R = randn(bit,bit);
 [U11 S2 V2] = svd(R);
 R = U11(:,1:bit);
-%R = eye(bit);
-
-% ITQ to find optimal rotation
-for iter=0:n_iter
-    Z = V * R;      
-    UX = ones(size(Z,1),size(Z,2)).*-1;
-    UX(Z>=0) = 1;
-    
-    C = UX' * V;
-    [UB,sigma,UA] = svd(C);    
-    R = UA * UB';
-end
 
 % make B binary
+Z = V * R;      
+UX = ones(size(Z,1),size(Z,2)).*-1;
+UX(Z>=0) = 1;
+
 B = UX;
 B(B<0) = 0;
 
