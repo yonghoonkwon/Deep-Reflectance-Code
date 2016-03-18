@@ -1,7 +1,7 @@
 addpath baselines;
 addpath misc_lib;
-addpath Kronecker;
-addpath Kronecker\tptool;
+addpath Kronecker_Projection\code\Kronecker;
+addpath Kronecker_Projection\code\Kronecker\tptool;
 run vlfeat/toolbox/vl_setup
 run matconvnet/matlab/vl_setupnn
 addpath vlfeat/toolbox
