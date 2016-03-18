@@ -4,3 +4,6 @@
 [submodule "vlfeat"]
 	path = vlfeat
 	url = https://github.com/vlfeat/vlfeat.git
+[submodule "Kronecker_Projection"]
+	path = Kronecker_Projection
+	url = https://github.com/spongezhang/Kronecker_Projection
