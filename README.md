@@ -5,6 +5,7 @@ Created by Hang Zhang, Kristin Dana and Ko Nishino
 ###   Introduction
 
 This repository contains the code for reproducing the results in the paper (coming soon)
+
 Link to the [project](http://www.hangzh.com/Friction.html)
 
 ### Get Started
@@ -25,13 +26,12 @@ Link to the [project](http://www.hangzh.com/Friction.html)
 
 ###   General Material Recogniton Results
 
-dataset         | FV-SIFt-Hash | CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt  |
---------------- |:------------:|:--- ---:|:------------:|:----------:|:--------:|:---------:|
-reflectance     | 64.5%        | 51.9%   | 60.1%        | 58.8%      |   59.9%  | 60.2%     |
-FMD             | 48.3%        | 65.0%   | 59.4%        | 57.7%      |   64.8%  | 65.5%     |
-DTD             | 43.6%        | 52.6%   | 52.3%        | 53.1%      |   55.4%  | 55.8%     |
-KTH             | 72.0%        | 73.7%   | 75.6%        | 54.4%      |   76.6%  | 77.2%     |
-
+dataset         | FV-SIFt-Hash | CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt  
+--------------- |:------------:|:--- ---:|:------------:|:----------:|:--------:|:---------:
+reflectance     | 64.5%        | 51.9%   | 60.1%        | 58.8%      |   59.9%  | 60.2%     
+FMD             | 48.3%        | 65.0%   | 59.4%        | 57.7%      |   64.8%  | 65.5%     
+DTD             | 43.6%        | 52.6%   | 52.3%        | 53.1%      |   55.4%  | 55.8%     
+KTH             | 72.0%        | 73.7%   | 75.6%        | 54.4%      |   76.6%  | 77.2%     
 
 
 ### Acknowldgements
