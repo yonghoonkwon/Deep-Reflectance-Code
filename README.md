@@ -27,7 +27,7 @@ Link to the [project](http://www.hangzh.com/Friction.html)
 ###   General Material Recogniton Results
 
 
-Dataset         | FV-SIFt-Hash | CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt
+Dataset         | FV-SIFT-Hash | CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt
 --------------- |:-----------:|:-------:|:------------:|:----------:|:--------:|:----------:
 reflectance     | 64.5%       | 51.9%   | 60.1%        | 58.8%      |   59.9%  | 60.2%
 FMD             | 48.3%       | 65.0%   | 59.4%        | 57.7%      |   64.8%  | 65.5%
