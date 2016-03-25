@@ -14,7 +14,7 @@ Link to the [project](http://www.hangzh.com/Friction.html)
 
 * Download the models (VGG-M) in `data/models` [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
 
-* Download the following dataset to data folder
+* Download the following dataset to `data/`
     * Reflectance Disks (coming soon)  
     * Flickr Material Database (FMD) [http://people.csail.mit.edu/celiu/CVPR2010/FMD/](http://people.csail.mit.edu/celiu/CVPR2010/FMD/) 
     * Describable Textures Dataset (DTD) [http://www.robots.ox.ac.uk/~vgg/data/dtd](http://www.robots.ox.ac.uk/~vgg/data/dtd)
