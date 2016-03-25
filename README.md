@@ -12,7 +12,7 @@ Link to the [project](http://www.hangzh.com/Friction.html)
 
 * The code relies on [vlfeat](http://www.vlfeat.org/), and [matconvnet](http://www.vlfeat.org/matconvnet), which should be downloaded and built before running the experiments. 
 
-* Download the models (VGG-M) in `data/models`. It is slightly faster to download them manually from here: [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
+* Download the models (VGG-M) in `data/models` [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
 
 * Download the following dataset to data folder
     * Reflectance Disks (coming soon)  
