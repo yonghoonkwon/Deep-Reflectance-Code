@@ -1,5 +1,6 @@
 function runExperiments()
-%% Run Hashing Experiments 2016
+% Run Hashing for Material Recognition Experiments
+% Copyright (C) 2016 Hang Zhang, Rutgers University
 
 setup;
 global index;
