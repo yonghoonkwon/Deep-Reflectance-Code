@@ -4,9 +4,17 @@ Created by Hang Zhang, Kristin Dana and Ko Nishino
 
 ###   Introduction
 
-This repository contains the code for reproducing the results in the paper (coming soon)
+This repository contains the code for reproducing the results in the paper (arxiv):
 
-Link to the [project](http://www.hangzh.com/Friction.html)
+      @article{zhang2016friction,
+         Author = {Hang Zhang and Kristin Dana and Ko Nishino},
+         Title = {Friction from Reflectance: Deep Reflectance Codes for Predicting Physical Surface Properties from One-Shot In-Field Reflectance},
+         journal = {},
+         volume = {arXiv:1603.07998},
+         Year = {2016}
+      }
+
+If you use the code for your research, please cite our paper. Link to the [project](http://www.hangzh.com/Friction.html)
 
 ### Get Started
 
