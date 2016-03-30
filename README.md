@@ -18,7 +18,7 @@ If you use the code for your research, please cite our paper. Link to the [proje
 
 ### Get Started
 
-* The code relies on [vlfeat](http://www.vlfeat.org/), and [matconvnet](http://www.vlfeat.org/matconvnet), which should be downloaded and built before running the experiments. 
+* The code relies on [vlfeat](http://www.vlfeat.org/), and [matconvnet-1.0-beta14](http://www.vlfeat.org/matconvnet/download/), which should be downloaded and built before running the experiments. 
 
 * Download the models (VGG-M) in `data/models` [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
 
