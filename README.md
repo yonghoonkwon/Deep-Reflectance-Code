@@ -23,7 +23,7 @@ If you use the code for your research, please cite our paper. Link to the [proje
 * Download the models (VGG-M) in `data/models` [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
 
 * Download the following dataset to `data/`
-    * Reflectance Disks (coming soon)  
+    * Reflectance Disks (reflectance) [https://goo.gl/VfKTpA](https://goo.gl/VfKTpA)  
     * Flickr Material Database (FMD) [http://people.csail.mit.edu/celiu/CVPR2010/FMD/](http://people.csail.mit.edu/celiu/CVPR2010/FMD/) 
     * Describable Textures Dataset (DTD) [http://www.robots.ox.ac.uk/~vgg/data/dtd](http://www.robots.ox.ac.uk/~vgg/data/dtd)
     * Textures under varying Illumination(KTH) [http://www.nada.kth.se/cvap/databases/kth-tips/](http://www.nada.kth.se/cvap/databases/kth-tips/)
