@@ -23,10 +23,10 @@ If you use the code for your research, please cite our paper. Link to the [proje
 * Download the models (VGG-M) in `data/models` [http://www.vlfeat.org/matconvnet/pretrained](http://www.vlfeat.org/matconvnet/pretrained).
 
 * Download the following dataset to `data/`
-    * Reflectance Disks (reflectance) [https://goo.gl/VfKTpA](https://goo.gl/VfKTpA)  
-    * Flickr Material Database (FMD) [http://people.csail.mit.edu/celiu/CVPR2010/FMD/](http://people.csail.mit.edu/celiu/CVPR2010/FMD/) 
-    * Describable Textures Dataset (DTD) [http://www.robots.ox.ac.uk/~vgg/data/dtd](http://www.robots.ox.ac.uk/~vgg/data/dtd)
-    * Textures under varying Illumination(KTH) [http://www.nada.kth.se/cvap/databases/kth-tips/](http://www.nada.kth.se/cvap/databases/kth-tips/)
+    * Reflectance Disks [(reflectance)](https://goo.gl/VfKTpA)  
+    * Flickr Material Database [(fmd)](http://people.csail.mit.edu/celiu/CVPR2010/FMD/) 
+    * Describable Textures Dataset [(dtd)](http://www.robots.ox.ac.uk/~vgg/data/dtd)
+    * Textures under varying Illumination [(kth)](http://www.nada.kth.se/cvap/databases/kth-tips/)
 
 * 'run_Experiments.m' reproducing general material recogniton results
 
@@ -45,4 +45,4 @@ KTH             | 72.0%       | 73.7%   | 75.6%        | 54.4%      |   76.6%  |
 
 ### Acknowldgements
 
-We thank [vlfeat](http://www.vlfeat.org/) and [matconvnet](http://www.vlfeat.org/matconvnet) teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for hashing methods [https://github.com/felixyu](https://github.com/felixyu) and Cimpoi for FV-CNN encoders [https://github.com/mcimpoi](https://github.com/mcimpoi). The copyrights of original codes reserve. 
+We thank [vlfeat](http://www.vlfeat.org/) and [matconvnet](http://www.vlfeat.org/matconvnet) teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for [hashing algorithms](https://github.com/felixyu) and Cimpoi for [FV-CNN encoders](https://github.com/mcimpoi). The copyrights of original codes reserve. 
