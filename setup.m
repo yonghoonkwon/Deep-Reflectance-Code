@@ -1,4 +1,4 @@
-addpath baselines;
+addpath baseline;
 addpath misc_lib;
 addpath Kronecker_Projection\code\Kronecker;
 addpath Kronecker_Projection\code\Kronecker\tptool;
