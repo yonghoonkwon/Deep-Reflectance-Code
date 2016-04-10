@@ -75,7 +75,7 @@ for ii = 1 : numel(datasetList)
     end
 end
 
-clear all;
+clear;
 %% Hashing 
 
 datasetList = {'reflectance','fmd','dtd', 'kth'};%'mit'
