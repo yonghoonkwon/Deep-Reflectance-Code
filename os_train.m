@@ -295,7 +295,7 @@ poolobj = parpool;
 if isempty(poolobj)
     numWorkers = 0;
 else
-    numWorkers = poolobj.NumWorkers
+    numWorkers = poolobj.NumWorkers -1
 end
 %numWorkers = matlabpool('size') ;
 parfor (b = 1:numel(batches), numWorkers)
