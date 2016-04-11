@@ -4,7 +4,7 @@ Created by Hang Zhang, Kristin Dana and Ko Nishino
 
 ###   Introduction
 
-This repository contains the code for reproducing the results in the paper (arxiv):
+This repository contains the code for reproducing the results in the paper (arXiv):
 
       @article{zhang2016friction,
          Author = {Hang Zhang and Kristin Dana and Ko Nishino},
@@ -28,14 +28,14 @@ If you use the code for your research, please cite our paper. Link to the [proje
     * Describable Textures Dataset [(dtd)](http://www.robots.ox.ac.uk/~vgg/data/dtd)
     * Textures under varying Illumination [(kth)](http://www.nada.kth.se/cvap/databases/kth-tips/)
 
-* 'run_Experiments.m' reproducing general material recogniton results
+* `run_Experiments.m` reproducing general material recogniton results
 
-*  'HashForFriction_Demo.m' reproducting friction prediction results
+* `HashForFriction_Demo.m` reproducting friction prediction results
 
 ###   General Material Recogniton Results
 
 
-Dataset         | FV-SIFT-Hash | CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt
+Dataset         | FV-SIFT-Hash| CNN-ITQ | VLAD-CNN-KBE | FV-CNN-KBE |   DRC    |  DRC-opt
 --------------- |:-----------:|:-------:|:------------:|:----------:|:--------:|:----------:
 reflectance     | 64.5%       | 51.9%   | 60.1%        | 58.8%      |   59.9%  | 60.2%
 FMD             | 48.3%       | 65.0%   | 59.4%        | 57.7%      |   64.8%  | 65.5%
