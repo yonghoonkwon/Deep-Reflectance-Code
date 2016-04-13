@@ -4,7 +4,7 @@ Created by Hang Zhang, Kristin Dana and Ko Nishino
 
 ###   Introduction
 
-This repository contains the code for reproducing the results in the paper (arXiv):
+This repository contains the code for reproducing the results in the [paper](http://arxiv.org/abs/1603.07998) (arXiv):
 
       @article{zhang2016friction,
          Author = {Hang Zhang and Kristin Dana and Ko Nishino},
