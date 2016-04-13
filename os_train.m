@@ -405,6 +405,7 @@ end
 switch opts.type
   case {'rcnn', 'dcnn'}
     encoder.net = load(opts.model) ;
+    encoder.net = vl_simplenn_tidy(encoder.net);
     encoder.net.layers = encoder.net.layers(1:opts.layer) ;
     if opts.useGpu
       encoder.net = vl_simplenn_move(encoder.net, 'gpu') ;
