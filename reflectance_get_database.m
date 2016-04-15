@@ -5,19 +5,19 @@ opts = vl_argparse(opts, varargin) ;
 rng(opts.seed) ;
 
 imdb.imageDir = fullfile(datasetDir, 'images') ;
-imdb.maskDir = fullfile(datasetDir, 'mask') ;
 
 cats = dir(imdb.imageDir) ;
 cats = cats([cats.isdir] & ~ismember({cats.name}, {'.','..'})) ;
 imdb.classes.name = {cats.name} ;
 imdb.images.id = [] ;
 imdb.sets = {'train', 'val', 'test'} ;
-
+ins_num=[];
 for c=1:numel(cats)
   dirinfo = dir(fullfile(imdb.imageDir, imdb.classes.name{c}));
   dirinfo(~[dirinfo.isdir]) = [];
   dirinfo = dirinfo(3:end)';
   ims = cell(1);
+  ins_num = [ins_num length(dirinfo)];
   for K = 1 : length(dirinfo)
     imsi{K} = dir(fullfile(imdb.imageDir, imdb.classes.name{c}, dirinfo(K).name,'*.bmp'));
     if size(imsi{K})>84
@@ -33,52 +33,55 @@ for c=1:numel(cats)
     end
   end
   
-  
-  %imdb.images.name{c} = fullfile(imdb.classes.name{c}, {ims.name}) ;
   imdb.images.name{c} = cellfun(@(S) fullfile(imdb.classes.name{c}, S), ...
     {ims.name}, 'Uniform', 0);
   imdb.images.label{c} = c * ones(1,numel(ims)) ;
-  %
-%   if numel(ims) ~= 100,
-%       disp(imdb.imageDir);
-%       disp(imdb.classes.name{c});
-%       error('MIT indoor data inconsistent') ;
-%   end
-%   sets = [1 * ones(1,40), 2 * ones(1,40), 3 * ones(1,40)] ;
-%   imdb.images.set{c} = sets(randperm(120)) ;
+  
 end
+
 imdb.images.name = horzcat(imdb.images.name{:}) ;
 imdb.images.label = horzcat(imdb.images.label{:}) ;
 %imdb.images.set = horzcat(imdb.images.set{:}) ;
 imdb.images.id = 1:numel(imdb.images.name) ;
 
-% % Note that there is no validation data in the original split
-% for s = [1 3]
-% %   disp(fullfile(datasetDir, 'meta', ...
-% %     sprintf('%s.txt', imdb.sets{s})));
-%   list = textread(fullfile(datasetDir, 'meta', ...
-%     sprintf('%s.txt', imdb.sets{s})),'%s') ;
-%   list = strrep(list, '/', '\');
-%   imdb.images.set(find(ismember(imdb.images.name, list))) = s ;
-% end
-% imdb.images.set(find(imdb.images.set==0)) = 1;
-% % 
 % % % hack
 % sel_train = find(imdb.images.set == 1);
 % imdb.images.set(sel_train(1 : 4 : end)) = 2;
 
 imdb.images.set = zeros(1,size(imdb.images.name,2));
-idx = randperm(size(imdb.images.name,2));
-numtest = floor(double(size(imdb.images.name,2))/10);
-imdb.images.set(1,idx(1:numtest))=3;
-imdb.images.set(1,idx((numtest+1):end))=1;
 imdb.segments = imdb.images ;
 imdb.segments.imageId = imdb.images.id ;
-% no segment masks
 
 % make this compatible with the OS imdb
 imdb.meta.classes = imdb.classes.name ;
 imdb.meta.inUse = true(1,numel(imdb.meta.classes)) ;
 imdb.segments.difficult = false(1, numel(imdb.segments.id)) ;
+
+numClass = 21;
+rng('shuffle')
+%ins_num = [6 5 10 6 8 10 6 5 6 5 6 6 10 6 8 6 6 6 5 5 6];
+sum_i = 0;
+test_class = [];
+for i=1:numClass
+    test_class = [test_class sum_i+randi([1 ins_num(i)])];
+    sum_i = sum_i + ins_num(i);
+end
+
+train_class = setdiff(1:sum(ins_num), test_class);
+
+total_index = 1:size(imdb.images.name,2);
+index_m = reshape(total_index, 84, uint8(size(total_index,2)/84));
+train_m = index_m(:,train_class);
+test_m = index_m(:,test_class);
+
+train_index = reshape(train_m, 1, size(train_m(:),1));
+test_index = reshape(test_m, 1, size(test_m(:),1));
+
+imdb.images.set(1, test_index) = 3;
+imdb.images.set(1, train_index) = 1;
+
+sel_train = find(imdb.images.set == 1);
+imdb.images.set(sel_train(1 : 4 : end)) = 2;
+
 end
 
