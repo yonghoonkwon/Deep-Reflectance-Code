@@ -80,8 +80,8 @@ test_index = reshape(test_m, 1, size(test_m(:),1));
 imdb.images.set(1, test_index) = 3;
 imdb.images.set(1, train_index) = 1;
 
-sel_train = find(imdb.images.set == 1);
-imdb.images.set(sel_train(1 : 4 : end)) = 2;
+sel_train = find(imdb.images.set == 3);
+imdb.images.set(sel_train(1 : 2 : end)) = 2;
 
 end
 
