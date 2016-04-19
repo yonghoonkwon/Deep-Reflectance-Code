@@ -44,10 +44,6 @@ imdb.images.label = horzcat(imdb.images.label{:}) ;
 %imdb.images.set = horzcat(imdb.images.set{:}) ;
 imdb.images.id = 1:numel(imdb.images.name) ;
 
-% % % hack
-% sel_train = find(imdb.images.set == 1);
-% imdb.images.set(sel_train(1 : 4 : end)) = 2;
-
 imdb.images.set = zeros(1,size(imdb.images.name,2));
 imdb.segments = imdb.images ;
 imdb.segments.imageId = imdb.images.id ;
@@ -58,8 +54,6 @@ imdb.meta.inUse = true(1,numel(imdb.meta.classes)) ;
 imdb.segments.difficult = false(1, numel(imdb.segments.id)) ;
 
 numClass = 21;
-rng('shuffle')
-%ins_num = [6 5 10 6 8 10 6 5 6 5 6 6 10 6 8 6 6 6 5 5 6];
 sum_i = 0;
 test_class = [];
 for i=1:numClass
