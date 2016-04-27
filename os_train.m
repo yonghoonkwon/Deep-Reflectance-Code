@@ -159,7 +159,7 @@ multiLabel = (size(imdb.segments.label,1) > 1) ;
 if opts.excludeDifficult
   imdb.segments.set(imdb.segments.difficult) = 0 ;
 end
-train = ismember(imdb.segments.set, [1 2]) ;
+train = ismember(imdb.segments.set, 1) ;
 test = ismember(imdb.segments.set, 3) ;
 
 info.classes = find(imdb.meta.inUse) ;
