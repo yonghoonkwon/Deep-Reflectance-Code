@@ -42,9 +42,9 @@ dsift.opts = {...
     'numPcaDimensions', 80} ;
 
 % Set of experiments to run
-setupNameList = {'rcnn', 'dcnn'}; %, 'dsift', 'dcnnvlad' 
-encoderList = {{rcnn}, {dcnn}}; % , {dsift}, {dcnnvlad} 
-datasetList = { {'fmd',1}} ;%{'reflectance',1},,{'dtd',10},{'kth', 4}
+setupNameList = {'rcnn', 'dcnn', 'dsift', 'dcnnvlad' }; %
+encoderList = {{rcnn}, {dcnn}, {dsift}, {dcnnvlad} }; % 
+datasetList = { {'fmd',1}, {'reflectance',1},{'dtd',1},{'kth', 1}} ;%
 %, ,, {'voc07',1}, {'os',1}
 
 
