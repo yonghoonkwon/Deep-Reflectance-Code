@@ -4,6 +4,3 @@
 [submodule "Kronecker_Projection"]
 	path = Kronecker_Projection
 	url = https://github.com/spongezhang/Kronecker_Projection
-[submodule "matconvnet"]
-	path = matconvnet
-	url = https://github.com/zhanghang1989/matconvnet.git
