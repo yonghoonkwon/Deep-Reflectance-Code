@@ -42,9 +42,9 @@ dsift.opts = {...
     'numPcaDimensions', 80} ;
 
 % Set of experiments to run
-setupNameList = {'rcnn', 'dcnn', 'dsift', 'dcnnvlad'}; 
-encoderList = {{rcnn}, {dcnn}, {dsift}, {dcnnvlad}}; 
-datasetList = {{'reflectance',1}, {'fmd',14},{'dtd',10},{'kth', 4}} ;%
+setupNameList = {'rcnn', 'dcnn'}; %, 'dsift', 'dcnnvlad' 
+encoderList = {{rcnn}, {dcnn}}; % , {dsift}, {dcnnvlad} 
+datasetList = { {'fmd',1}} ;%{'reflectance',1},,{'dtd',10},{'kth', 4}
 %, ,, {'voc07',1}, {'os',1}
 
 
@@ -78,9 +78,9 @@ end
 clear;
 %% Hashing 
 
-datasetList = {'reflectance','fmd','dtd', 'kth'};%'mit'
-method = { 'dsift-LSH', 'rcnn-ITQ','vlad-KBE-orth', 'dcnn-KBE-orth'... % ,,'vlad-KBE'
-    'dcnn-LSH', 'dcnn-ITQ'};% ,'dcnn-ITQ-rand', ,, 'dcnn-ITQ'
+datasetList = {'reflectance','fmd','dtd','kth'};%'mit'
+method = {'dsift-LSH','rcnn-ITQ','vlad-KBE-orth', 'dcnn-KBE-orth' ... % ,,'vlad-KBE'
+    'dcnn-LSH', 'dcnn-ITQ'};% ,'dcnn-ITQ-rand',
 bits = 2.^([ 8 9 10 11 12]);%;
 
 for k = bits
@@ -93,6 +93,7 @@ for k = bits
         end
     end
 end
+global aver_res
 aver_res = mean(res,4);
 
 for i=1:size(res,1)
@@ -106,9 +107,8 @@ end
 method2 = { 'FV-SIFT-H', 'CNN-ITQ','vlad-CNN-KBE', 'FV-CNN-KBE'...
     'FV-CNNH-rand', 'FV-CNNH-opt'};
 
-r2 = reshape(aver_res(2,:,:),5,5);
-drawFigure2016(2.^([ 8 9 10 11 12]),method,r2)
-r3 = reshape(aver_res(3,:,:),5,5);
-drawFigure2016(2.^([ 8 9 10 11 12]),method,r3)
-
+for i =1:numel(datasetList)
+r2 = reshape(aver_res(1,:,:),numel(method), numel(bits));
+drawFigure2016(bits,method,r2, datasetList{i})
 end
+

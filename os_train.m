@@ -75,56 +75,6 @@ if ~exist(opts.resultPath)
 end
 
 % -------------------------------------------------------------------------
-%                                                            Train and test
-% -------------------------------------------------------------------------
-
-if exist(opts.resultPath)
-  info = load(opts.resultPath) ;
-else
-  info = traintest(opts, imdb, psi) ;
-  save(opts.resultPath, '-struct', 'info') ;
-  vl_printsize(1) ;
-  [a,b,c] = fileparts(opts.resultPath) ;
-  print('-dpdf', fullfile(a, [b '.pdf'])) ;
-end
-
-str = {} ;
-str{end+1} = sprintf('data: %s', opts.expDir) ;
-str{end+1} = sprintf(' setup: %10s', opts.suffix) ;
-str{end+1} = sprintf(' mAP: %.1f', info.test.map*100) ;
-str{end+1} = sprintf(' mAP VOC07: %.1f', info.test.map11*100) ;
-if isfield(info.test, 'acc')
-  str{end+1} = sprintf(' per pixel acc: %6.1f (msrc: %6.1f)', info.test.acc*100, info.test.msrcAcc*100) ;
-  str{end+1} = sprintf(' per segment acc: %6.1f', info.test.psAcc*100) ;
-end
-str{end+1} = sprintf('\n') ;
-str = cat(2, str{:}) ;
-fprintf('%s', str) ;
-
-[a,b,c] = fileparts(opts.resultPath) ;
-txtPath = fullfile(a, [b '.txt']) ;
-f=fopen(txtPath, 'w') ;
-fprintf(f, '%s', str) ;
-fclose(f) ;
-
-% -------------------------------------------------------------------------
-%                                             Write PASCAL VOC 2012 results
-% -------------------------------------------------------------------------
-if 0 && opts.writeResults
-   test = find(ismember(imdb.segments.set, 3));
-   [baseDir, ~, ~] = fileparts(opts.vocResultPath);
-   vl_xmkdir(baseDir);
-   for c = 1:length(info.classes),
-        scoreFile = sprintf(opts.vocResultPath, 'test', imdb.classes.name{info.classes(c)});
-        fid = fopen(scoreFile, 'w');
-        for i = 1:length(test),
-            fprintf(fid, '%s %f\n', imdb.segments.vocid{test(i)}, info.scores(c, test(i)));
-        end
-        fclose(fid);
-   end
-end
-
-% -------------------------------------------------------------------------
 function info = traintest(opts, imdb, psi)
 % -------------------------------------------------------------------------
 

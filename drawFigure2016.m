@@ -1,4 +1,4 @@
-function drawFigure2_cvpr16(xx, method, res )
+function drawFigure2_cvpr16(xx, method, res, datasetName)
 %DRAWFIGURE Summary of this function goes here
 %   Detailed explanation goes here
 %cc=hsv(length(method));
@@ -20,6 +20,9 @@ xlim([min(xx) max(xx)]);
 set(gca, 'XTick', xx)
 grid on;
 legend(method, 'location', 'SouthEast');
+
+if(exist(datasetName, 'var')&&~isempty(datasetName)) , title(datasetName) 
+end
 %print(h, sprintf('figure_%f.eps', now), '-depsc')
 
 end
