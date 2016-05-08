@@ -1,6 +1,6 @@
 function os_train(varargin)
 opts.writeResults = 0;
-%global imdb  train y info
+%global imdb train
 [opts, imdb] = os_setup(varargin{:}) ;
 
 if strcmp(opts.dataset,'dtd')

@@ -68,8 +68,7 @@ for ii = 1 : numel(datasetList)
                 'suffix', setupNameList{ee}, ...
                 'printDatasetInfo', ee == 1, ...
                 'writeResults', true, ...
-                'vocDir', 'data/VOC2007', ...
-                'useGpu', true, ...
+                'useGpu', false, ...
                 'gpuId', 1);
         end
     end
@@ -93,7 +92,6 @@ for k = bits
         end
     end
 end
-global aver_res
 aver_res = mean(res,4);
 
 for i=1:size(res,1)
@@ -108,6 +106,7 @@ method2 = { 'FV-SIFT-H', 'CNN-ITQ','vlad-CNN-KBE', 'FV-CNN-KBE'...
     'FV-CNNH-rand', 'FV-CNNH-opt'};
 
 for i =1:numel(datasetList)
+figure(i)
 r2 = reshape(aver_res(1,:,:),numel(method), numel(bits));
 drawFigure2016(bits,method,r2, datasetList{i})
 end

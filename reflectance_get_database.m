@@ -76,6 +76,5 @@ imdb.images.set(1, train_index) = 1;
 
 sel_train = find(imdb.images.set == 3);
 imdb.images.set(sel_train(1 : 2 : end)) = 2;
-
-end
+imdb.segments.set = imdb.images.set;
 
