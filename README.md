@@ -1,4 +1,4 @@
-## Deep Reflectance Codes (DRC), A Hashing Approach for Material Recognition and Surface Friction Prediction from Reflectance 
+## Deep Reflectance Codes (DRC), A Hashing Approach for Material Retrieval 
 
 Created by Hang Zhang, Kristin Dana and Ko Nishino
 
