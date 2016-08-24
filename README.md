@@ -47,5 +47,8 @@ KTH             | 72.0%       | 73.7%   | 75.6%        | 54.4%      |   76.6%  |
 
 
 ### Acknowldgements
+This work was supported by National Science Foundation award IIS-1421134 to KD
+and KN and Office of Naval Research grant N00014-16-1-2158 (N00014-14-1-0316)
+to KN.
 
-We thank [vlfeat](http://www.vlfeat.org/) and [matconvnet](http://www.vlfeat.org/matconvnet) teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for [hashing algorithms](https://github.com/felixyu) and Cimpoi for [FV-CNN encoders](https://github.com/mcimpoi). The copyrights of original codes reserve. 
+We thank [vlfeat](http://www.vlfeat.org/) and [matconvnet](http://www.vlfeat.org/matconvnet) teams for creating and maintaining these excellent packages. We would like to thank Felix Yu for [hashing algorithms](https://github.com/felixyu) and Cimpoi for [FV-CNN encoders](https://github.com/mcimpoi). The copyrights of original code reserve. 
