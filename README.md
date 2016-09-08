@@ -9,8 +9,7 @@ This repository contains the code for reproducing the results in the [paper](htt
       @article{zhang2016friction,
          Author = {Hang Zhang and Kristin Dana and Ko Nishino},
          Title = {Friction from Reflectance: Deep Reflectance Codes for Predicting Physical Surface Properties from One-Shot In-Field Reflectance},
-         journal = {},
-         volume = {arXiv:1603.07998},
+         Booktitle = {Proceedings of the European Conference on Computer Vision ({ECCV})},
          Year = {2016}
       }
 
