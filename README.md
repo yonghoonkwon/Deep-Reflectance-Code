@@ -13,7 +13,7 @@ This repository contains the code for reproducing the results in the [paper](htt
          Year = {2016}
       }
 
-If you use the code for your research, please cite our paper. Link to the [project](http://www.hangzh.com/Friction.html)
+If you use the code for your research, please cite our paper. Link to the [project](http://eceweb1.rutgers.edu/vision/labweb/index.html)
 
 ### Get Started
 
