@@ -6,7 +6,7 @@ Created by Hang Zhang, Kristin Dana and Ko Nishino
 
 This repository contains the code for reproducing the results in the [paper](http://arxiv.org/abs/1603.07998) (ECCV 2016):
 
-      @article{zhang2016friction,
+      @inproceedings{zhang2016friction,
          Author = {Hang Zhang and Kristin Dana and Ko Nishino},
          Title = {Friction from Reflectance: Deep Reflectance Codes for Predicting Physical Surface Properties from One-Shot In-Field Reflectance},
          Booktitle = {Proceedings of the European Conference on Computer Vision ({ECCV})},
